@@ -208,7 +208,7 @@ export default {
       if (res.meta.status !== 201) {
         return this.$message.error('添加角色失败')
       }
-      console.log(res)
+      // console.log(res)
       this.$message.success('添加角色成功')
       // 隐藏添加角色的对话框
       this.addRoleDialogVisible = false
@@ -252,7 +252,7 @@ export default {
     async editRole() {
       // 发起修改角色信息的数据请求
       const { data: res } = await this.$http.put('roles/' + this.editRoleForm.roleId, { roleName: this.editRoleForm.roleName, roleDesc: this.editRoleForm.roleDesc })
-      console.log(this.editRoleForm)
+      // console.log(this.editRoleForm)
       if (res.meta.status !== 200) {
         return this.$message.error('角色更新失败')
       }
